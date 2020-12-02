@@ -3,23 +3,15 @@
 
 -- tables
 -- Table: fight
-CREATE TABLE fight (
-    id_fight serial NOT NULL,
-    id_winner serial NOT NULL,
-    id_loser serial NOT NULL,
-    id_location serial NOT NULL,
-    id_year serial NOT NULL,
-    title_bout int NOT NULL,
-    id_weight_class serial NOT NULL,
-    date date NOT NULL,
-    CONSTRAINT fight_pk PRIMARY KEY (id_fight)
-);
+DROP DATABASE ufc_schema;
+CREATE DATABASE ufc_schema;
+USE ufc_schema;
 
 -- Table: fighters
 CREATE TABLE fighters (
-    id_fighters serial NOT NULL,
-    name varchar(20) NOT NULL,
-    gender varchar(2) NOT NULL,
+    id_fighters INT NOT NULL AUTO_INCREMENT,
+    name varchar(50) NOT NULL,
+    gender varchar(6) NOT NULL,
     born_year int NOT NULL,
     title_bout int NOT NULL,
     CONSTRAINT fighters_pk PRIMARY KEY (id_fighters)
@@ -27,46 +19,41 @@ CREATE TABLE fighters (
 
 -- Table: location
 CREATE TABLE location (
-    id_location serial NOT NULL,
+    id_location INT NOT NULL AUTO_INCREMENT,
     city varchar(30) NOT NULL,
-    state varchar(30) NOT NULL,
+    state varchar(30),
     country varchar(30) NOT NULL,
     CONSTRAINT location_pk PRIMARY KEY (id_location)
 );
 
 -- Table: weight_class
 CREATE TABLE weight_class (
-    id_weight_class serial NOT NULL,
+    id_weight_class INT NOT NULL AUTO_INCREMENT,
     name varchar(30) NOT NULL,
     CONSTRAINT weight_class_pk PRIMARY KEY (id_weight_class)
 );
 
 -- Table: year
 CREATE TABLE year (
-    id_year serial NOT NULL,
+    id_year INT NOT NULL AUTO_INCREMENT,
     CONSTRAINT year_pk PRIMARY KEY (id_year)
 );
 
--- foreign keys
--- Reference: fight_fighters_loser (table: fight)
-ALTER TABLE fight ADD CONSTRAINT fight_fighters_loser FOREIGN KEY fight_fighters_loser (id_loser)
-    REFERENCES fighters (id_fighters);
-
--- Reference: fight_fighters_winner (table: fight)
-ALTER TABLE fight ADD CONSTRAINT fight_fighters_winner FOREIGN KEY fight_fighters_winner (id_winner)
-    REFERENCES fighters (id_fighters);
-
--- Reference: fight_location (table: fight)
-ALTER TABLE fight ADD CONSTRAINT fight_location FOREIGN KEY fight_location (id_location)
-    REFERENCES location (id_location);
-
--- Reference: fight_weight_class (table: fight)
-ALTER TABLE fight ADD CONSTRAINT fight_weight_class FOREIGN KEY fight_weight_class (id_weight_class)
-    REFERENCES weight_class (id_weight_class);
-
--- Reference: fight_year (table: fight)
-ALTER TABLE fight ADD CONSTRAINT fight_year FOREIGN KEY fight_year (id_year)
-    REFERENCES year (id_year);
+CREATE TABLE fight (
+    id_fight INT NOT NULL AUTO_INCREMENT,
+    id_winner INT NOT NULL,
+    id_loser INT NOT NULL,
+    id_location INT NOT NULL,
+    id_year INT NOT NULL,
+    title_bout int NOT NULL,
+    id_weight_class INT NOT NULL,
+    date datetime NOT NULL,
+    CONSTRAINT fight_pk PRIMARY KEY (id_fight),
+    CONSTRAINT fight_fighters_fk_loser FOREIGN KEY (id_loser) REFERENCES fighters (id_fighters),
+    CONSTRAINT fight_fighters_fk_winner FOREIGN KEY (id_winner) REFERENCES fighters (id_fighters),
+    CONSTRAINT fight_location FOREIGN KEY (id_location) REFERENCES location (id_location),
+	CONSTRAINT fight_weight_class FOREIGN KEY (id_weight_class) REFERENCES weight_class (id_weight_class),
+	CONSTRAINT fight_year FOREIGN KEY (id_year) REFERENCES year (id_year)
+);
 
 -- End of file.
-
