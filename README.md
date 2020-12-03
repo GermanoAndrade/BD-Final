@@ -8,6 +8,6 @@ A base escolhida foi de lutas de UFC do Kaggle:
 ## Representação
 O banco de dados está representado da seguinte forma:  
 
-![UFC_Schema](./Images/UFC_Schema.png)
+![UFC_Schema](./Images/UFC_Schema_1.png)
 
 
