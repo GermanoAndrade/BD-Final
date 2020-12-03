@@ -13,7 +13,7 @@ CREATE TABLE fighters (
     name varchar(50) NOT NULL,
     gender varchar(6) NOT NULL,
     born_year int NOT NULL,
-    title_bout int NOT NULL,
+    titles int NOT NULL,
     CONSTRAINT fighters_pk PRIMARY KEY (id_fighters)
 );
 

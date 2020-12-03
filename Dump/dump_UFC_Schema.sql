@@ -1,4 +1,4 @@
-INSERT INTO fighters (name, gender, title_bout, born_year)
+INSERT INTO fighters (name, gender, titles, born_year)
 VALUES 	('Glover Teixeira', 'MALE', 1.0, 1979.0),
 	('Andrei Arlovski', 'MALE', 5.0, 1979.0),
 	('Anthony Birchak', 'MALE', 0.0, 1986.0),
