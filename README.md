@@ -24,18 +24,43 @@ Além de bibliotecas como `numpy` e `pandas` para manipulação de dataframes, f
 
 > OBS.: todas as bibliotecas citadas podem ser instaladas rodando `pip install <nome_biblioteca>`
 
+## Banco de Dados completo
+<div align="center">
+<img src="./Images/full_bd.png" width="700px"></br>
+</div>
+
+#### Descrição do banco
+<div align="center">
+<img src="./Images/bd_description.png" width="400px">
+</div>
+
+> OBS.: Toda a parte de leitura, manipulação e exportação pode ser encontrada em [`Notebook_Final.ipynb`](./Notebook_Final.ipynb)
+
 ## Aplicabilidade
+<div align="center">
+	<a href="http://dapp.fgv.br/robos-redes-sociais-e-politica-estudo-da-fgvdapp-aponta-interferencias-ilegitimas-no-debate-publico-na-web/"><img src="http://dapp.fgv.br/wp-content/uploads/2017/08/1-1420x1099.jpg" height="500px"></a>
+</div>
 
 Grafos em geral são utilizados para análise de relações entre indivíduos ou objetos. Atualmente, são bastante utilizados para analisar relações e/ou interações dentro de redes sociais ou até mesmo interação entre partículas ou células.
 
 ## Resultados
+
 <div align="center">
-<img src="./Results/UFC_Graph - Brazil_MALE.png" width="750px">
+<img src="./Results/UFC_Graph-2010.png" width="700px"></br>
+Visualização estática <a href="./Results/UFC_Graph-2010.png"><code>UFC_Graph-2010</code></a></br>
+Lutas que ocorreram no ano de 2010
 </div>
 
 <div align="center">
-<img src="./Results/UFC_Graph-2010.png" width="700px">
-</div>
+<img src="./Images/UFC_Graph-at-least-10-titles.gif" width="500px"></br>
+Visualização interativa <a href="./Images/UFC_Graph-at-least-10-titles.gif"><code>UFC_Graph-at-least-10-titles</code></a><br>
+Grafo com lutadores que têm, pelo menos, 10 títulos.
+</div></br>
 
+<div align="center">
+<img src="./Images/UFC_Graph-Brazil_MALE.gif" width="500px"></br>
+Visualização interativa <a href="./Images/UFC_Graph-Brazil_MALE.gif"><code>UFC_Graph-Brazil_MALE</code></a></br>
+Grafo apenas com lutas em que brasileiros participaram.
+</div>
 
 
