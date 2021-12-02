@@ -49,7 +49,7 @@ Grafos em geral são utilizados para análise de relações entre indivíduos ou
 <img src="./Results/UFC_Graph-2010.png" width="700px"></br>
 Visualização estática <a href="./Results/UFC_Graph-2010.png"><code>UFC_Graph-2010</code></a></br>
 Lutas que ocorreram no ano de 2010
-</div>
+</div></br></br>
 
 <div align="center">
 <img src="./Images/UFC_Graph-at-least-10-titles.gif" width="500px"></br>
